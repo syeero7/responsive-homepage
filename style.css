@@ -35,7 +35,7 @@
   --amber: #d97706;
   --pink: #be185d;
 
-  --header-bg: linear-gradient(to right bottom, var(--cyan) 50%, var(--white) 50%);
+  --header-bg: linear-gradient(to right bottom, var(--cyan) 50%, var(--white) 50.08%);
 
   --box-shadow: 5px 5px 8px hsla(0, 0%, 0%, 0.25);
 }
@@ -314,5 +314,64 @@ h1 {
   .footer h2,
   .footer .social-links {
     align-self: flex-start;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .header {
+    background-size: 800% 200%;
+    background-position: -200%;
+  }
+
+  .about {
+    max-width: 70ch;
+    margin: 4rem auto 2rem;
+    padding: 0 2rem 0 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0;
+  }
+
+  .about > .portrait {
+    transform-origin: initial;
+    margin-right: 3.5rem;
+    grid-area: 1/1/5/2;
+  }
+
+  .about h2 {
+    margin: 0 auto 0 0;
+  }
+
+  .about p {
+    grid-area: 2/2/4/3;
+  }
+
+  .about .social-links {
+    display: flex;
+    margin-left: auto;
+  }
+
+  h1 {
+    inset: auto auto 0 auto;
+    transform: initial;
+    margin: auto auto auto 0.5rem;
+  }
+
+  .projects {
+    margin-top: 6rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 1rem 3rem;
+    gap: 3rem;
+  }
+
+  .project {
+    min-height: 12rem;
+    font-size: 1.5em;
+  }
+
+  .footer article {
+    gap: 1.5rem;
   }
 }
